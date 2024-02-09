@@ -1,0 +1,376 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.content-wrapper {
+    min-height: 100%;
+    border: 15px solid black;
+    box-sizing: border-box;
+}
+
+footer {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    padding: 25px 0;
+    font-size: 14px;
+    color: grey;
+}
+
+/* --- ANIMATION TRANSITION STYLING --- */
+.border-animation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: 0px solid black;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes borderAnimation {
+
+    0%,
+    100% {
+        border-width: 0px;
+    }
+
+    50% {
+        border-width: 550px;
+    }
+}
+
+.animated-border {
+    animation: borderAnimation .75s;
+}
+
+@keyframes borderAnimationLarge {
+
+    0%,
+    100% {
+        border-width: 0px;
+    }
+
+    50% {
+        border-width: 750px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .animated-border {
+        animation: borderAnimationLarge .85s;
+    }
+}
+
+/* ------------------------------------ */
+
+/* --- TOP LEFT NAMEPLATE STYLING --- */
+.avatar {
+    margin-right: 20px;
+    width: 64px;
+    height: 64px;
+    float: left;
+}
+
+.name {
+    margin-top: 40px;
+    margin-left: 50px;
+    text-align: left;
+    font-size: 14px;
+}
+
+.name h1 {
+    margin: 0;
+}
+
+.title {
+    margin-top: 0;
+    font-size: 16px;
+    color: grey;
+}
+
+.button {
+    position: absolute;
+    top: 61px;
+    left: 400px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    line-height: 0;
+}
+
+.button :hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* ---------------------------------- */
+
+/* --- TOP RIGHT SOCIAL LINK ICONS --- */
+.social {
+    position: absolute;
+    top: 58px;
+    right: 80px;
+    display: flex;
+    gap: 20px;
+}
+
+.social a {
+    color: black;
+    font-size: 20px;
+}
+
+.social a i {
+    font-size: 32px;
+    color: #000000;
+    transition: transform 0.2s ease-in-out;
+}
+
+.social a:hover i {
+    transform: scale(1.5);
+}
+
+/* ----------------------------------- */
+
+/* --- CENTER PAGE WELCOME TEXT --- */
+.info {
+    font-size: 16px;
+    text-align: center;
+    color: grey;
+    max-width: 600px;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 1.6;
+}
+
+.info h1 {
+    font-size: 36px;
+    color: black;
+}
+
+/* -------------------------------- */
+
+/* --- PROJECT CONTAINER STYLING --- */
+.container {
+    width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px #ccc;
+    margin: 0px;
+}
+
+.container-gif {
+    width: 100%;
+    height: 150px;
+    background-color: #f0f0f0;
+    overflow: hidden;
+}
+
+.container-gif img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -webkit-user-drag: none;
+    display: block;
+    pointer-events: none;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+.container:hover .container-gif img {
+    opacity: 1;
+}
+
+.container-text {
+    padding-top: 0px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 0fr));
+    gap: 20px;
+    padding: 40px;
+    justify-content: center;
+}
+
+.container-grid a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* --------------------------------- */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #242424;
+        color: white;
+    }
+
+    .button {
+        color: white;
+    }
+
+    .info {
+        color: grey;
+    }
+
+    .info h1 {
+        color: white;
+    }
+
+    .social a i {
+        color: white;
+    }
+
+    .container {
+        color: #242424;
+        box-shadow: 0px 0px 10px rgb(27, 27, 27);
+    }
+
+    .container-gif {
+        background-color: #000000;
+    }
+
+    .container-text {
+        color: white;
+        background-color: #242424;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .avatar {
+        margin-right: 20px;
+        width: 64px;
+        height: 64px;
+        float: left;
+    }
+
+    .name {
+        margin-top: 20px;
+        margin-left: 20px;
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 16px;
+        color: grey;
+    }
+
+    .button {
+        position: absolute;
+        top: 55px;
+        left: 35px;
+        margin-top: 50px;
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+        display: inline-block;
+        line-height: 0;
+    }
+
+    .social {
+        position: absolute;
+        top: 110px;
+        right: 35px;
+        display: flex;
+        gap: 20px;
+    }
+
+    .info {
+        font-size: 16px;
+        text-align: center;
+        color: grey;
+        max-width: 600px;
+        margin-top: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 35px;
+        padding-right: 35px;
+        line-height: 1.6;
+    }
+
+    .container {
+        width: 300px;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0px 0px 10px #ccc;
+        margin-top: 50px;
+    }
+
+    .container-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 0fr));
+        gap: 0px;
+        padding: 40px;
+        justify-content: center;
+    }
+
+    .footer-mobile {
+        position: relative;
+        text-align: center;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        padding: 10px 0;
+        font-size: 14px;
+        color: grey;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        body {
+            background-color: #242424;
+            color: white;
+        }
+
+        .button {
+            color: white;
+        }
+
+        .info {
+            color: grey;
+        }
+
+        .info h1 {
+            color: white;
+        }
+
+        .social a i {
+            color: white;
+        }
+
+        .container {
+            color: #242424;
+            box-shadow: 0px 0px 10px rgb(27, 27, 27);
+        }
+
+        .container-gif {
+            background-color: #000000;
+        }
+
+        .container-text {
+            color: white;
+            background-color: #242424;
+        }
+    }
+}

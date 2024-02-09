@@ -337,6 +337,18 @@ footer {
         color: grey;
     }
 
+    @keyframes borderAnimation {
+
+        0%,
+        100% {
+            border-width: 0px;
+        }
+    
+        50% {
+            border-width: 250px;
+        }
+    }
+
     @media (prefers-color-scheme: dark) {
         body {
             background-color: #242424;

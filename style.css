@@ -6,10 +6,12 @@ html, body {
 
 body {
     font-family: 'Montserrat', sans-serif;
+    background-color: black;
 }
 
 .content-wrapper {
     min-height: 100%;
+    background-color: white;
     border: 15px solid black;
     box-sizing: border-box;
 }
@@ -343,11 +345,11 @@ footer {
     @keyframes borderAnimation {
 
         0%, 100% {
-            border-width: 0vw;
+            border-width: 0px;
         }
     
         50% {
-            border-width: 50vw;
+            border-width: 250px;
         }
     }
 

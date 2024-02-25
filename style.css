@@ -6,12 +6,10 @@ html, body {
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: black;
 }
 
 .content-wrapper {
     min-height: 100%;
-    background-color: white;
     border: 15px solid black;
     box-sizing: border-box;
 }
